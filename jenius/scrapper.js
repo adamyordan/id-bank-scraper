@@ -9,7 +9,10 @@ function getHistoryData() {
 }
 
 async function scrap({ email, password }) {
-  const browser = await puppeteer.launch({ headless: true })
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  })
   const page = await browser.newPage()
   console.log('[+] Opening https://2secure.jenius.co.id/')
   await page.goto('https://2secure.jenius.co.id/')
