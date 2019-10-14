@@ -1,6 +1,6 @@
 require('dotenv').config()
 const writeJsonFile = require('write-json-file')
-const makeDir = require('make-dir');
+const makeDir = require('make-dir')
 const argv = require('minimist')(process.argv.slice(2))
 const jenius = require('./jenius')
 
